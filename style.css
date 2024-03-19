@@ -1,3 +1,9 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
 .map {
     position: absolute;
     top: 0;
@@ -5,4 +11,258 @@
     left: 0;
     right: 0;
     width: 100%;
+    height: 100%;
+}
+
+.legend {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 100px;
+    height: 340px;
+    background-color: rgba(250,240,230,0.2);
+    border-radius: 5px;
+    z-index: 10;
+}
+    .legend-item {
+        width: 93%;
+        height: 25px;
+        
+        border: 1px solid black;
+        border-radius: 5px;
+        background: rgba(250,240,230,0.6);
+        backdrop-filter: blur(2px);
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+        .legend-item-pic {
+            height: 100%;
+            width: 30px;
+            background-color: transparent;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .legend-item-info {
+            height: 100%;
+            width: calc(100% - 30px);
+            background-color: transparent;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+/* https://jtauber.github.io/articles/css-hexagon.html */
+.hexagon-left {
+    float: left;
+    border-right: 5px solid #6C6;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;    
+}
+.hexagon-middle {
+    float: left;
+    width: 11px;
+    height: 18px;
+    background-color: #6C6;    
+}
+.hexagon-right {
+    float: left;
+    border-left: 5px solid #6C6;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;    
+}
+    .hexa-1-left {
+        border-right-color: #2D00F7;
+    }
+    .hexa-1-mid {
+        background-color: #2D00F7;
+    }
+    .hexa-1-right {
+        border-left-color: #2D00F7;
+    }
+    .hexa-2-left {
+        border-right-color: #6A00F4;
+    }
+    .hexa-2-mid {
+        background-color: #6A00F4;
+    }
+    .hexa-2-right {
+        border-left-color: #6A00F4;
+    }
+    .hexa-3-left {
+        border-right-color: #8900F2;
+    }
+    .hexa-3-mid {
+        background-color: #8900F2;
+    }
+    .hexa-3-right {
+        border-left-color: #8900F2;
+    }
+    .hexa-4-left {
+        border-right-color: #A100F2;
+    }
+    .hexa-4-mid {
+        background-color: #A100F2;
+    }
+    .hexa-4-right {
+        border-left-color: #A100F2;
+    }
+    .hexa-5-left {
+        border-right-color: #B100E8;
+    }
+    .hexa-5-mid {
+        background-color: #B100E8;
+    }
+    .hexa-5-right {
+        border-left-color: #B100E8;
+    }
+    .hexa-6-left {
+        border-right-color: #BC00DD;
+    }
+    .hexa-6-mid {
+        background-color: #BC00DD;
+    }
+    .hexa-6-right {
+        border-left-color: #BC00DD;
+    }
+    .hexa-7-left {
+        border-right-color: #D100D1;
+    }
+    .hexa-7-mid {
+        background-color: #D100D1;
+    }
+    .hexa-7-right {
+        border-left-color: #D100D1;
+    }
+    .hexa-8-left {
+        border-right-color: #DB00B6;
+    }
+    .hexa-8-mid {
+        background-color: #DB00B6;
+    }
+    .hexa-8-right {
+        border-left-color: #DB00B6;
+    }
+    .hexa-9-left {
+        border-right-color: #E500A4;
+    }
+    .hexa-9-mid {
+        background-color: #E500A4;
+    }
+    .hexa-9-right {
+        border-left-color: #E500A4;
+    }
+    .hexa-10-left {
+        border-right-color: #F20089;
+    }
+    .hexa-10-mid {
+        background-color: #F20089;
+    }
+    .hexa-10-right {
+        border-left-color: #F20089;
+    }
+
+.map-front {
+    z-index: 5;
+}
+
+.button {
+    position: relative;
+    width: 150px;
+    height: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    background: rgba(235, 227, 227, 0.5);
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+    border-radius: 5px;
+    user-select: none;
+}
+    .button > p {
+        position: absolute;
+    }
+
+.hamburger-menu {
+    width: 200px;
+    height: 200px;
+    left: 20px;
+    top: 20px;
+    position: absolute;
+    opacity: 1;
+}
+    .hamburger-menu-button {
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        position: absolute;
+        z-index: 25;
+    }
+        .hamburger-menu-center {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .hamburger-menu-bar-mid {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .hamburger-menu-bar {
+            width: 35px;
+            height: 5px;
+            background-color: white;
+            position: relative;
+            border-radius: 3px;
+            border: 1px solid black;
+        }
+    .hamburger-menu-content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        top: 0px;
+
+        background: rgba(235, 227, 227, 0.5);
+        backdrop-filter: blur(3px);
+        border-radius: 3px;
+    }
+        .hamburger-menu-content-layout {
+            width: 100%;
+            height: calc(100% - 50px);
+            top: 50px;
+            position: absolute;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        }
+            .hamburger-menu-content-layout > .button {
+                margin-top: 14px;
+            }
+
+.flex-layout {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
 }

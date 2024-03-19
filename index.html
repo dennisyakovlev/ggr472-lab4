@@ -11,16 +11,145 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v3.1.2/mapbox-gl.css' rel='stylesheet' />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="anims.css">
     <!-- Turf.js -->
     <script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
 </head>
 
 <body>
-
-    <!-- MAP CONTAINER -->
+    <div class="hamburger-menu map-front">
+        <div class="hamburger-menu-button" id="menu-1">
+            <div class="hamburger-menu-center">
+                <div class="hamburger-menu-bar"></div>
+                <div class="hamburger-menu-bar hamburger-menu-bar-mid"></div>
+                <div class="hamburger-menu-bar"></div>
+            </div>
+        </div>
+        <div class="hamburger-menu-content menu-anim-start no-pointer">
+            <div class="hamburger-menu-content-layout">
+                <div class="button" id="btn-2">
+                    <p class="text-anim-mid">Accidents Off</p>
+                    <p class="text-anim-start">Accidents On</p>
+                </div>
+                <div class="button" id="btn-3">
+                    <p class="text-anim-mid">Hexgrid On</p>
+                    <p class="text-anim-start">Hexgrid Off</p>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div class="legend">
+        <div class="flex-layout">
+            <div class="legend-item">
+                <p>Accidents</p>
+            </div>
+            <div class="legend-item">
+                <div class="legend-item-pic">
+                    <div class="hexagon-left hexa-1-left"></div>
+                    <div class="hexagon-middle hexa-1-mid"></div>
+                    <div class="hexagon-right hexa-1-right"></div>
+                </div>
+                <div class="legend-item-info">
+                    <p>0</p>
+                </div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-item-pic">
+                    <div class="hexagon-left hexa-2-left"></div>
+                    <div class="hexagon-middle hexa-2-mid"></div>
+                    <div class="hexagon-right hexa-2-right"></div>
+                </div>
+                <div class="legend-item-info">
+                    <p>≤ 2</p>
+                </div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-item-pic">
+                    <div class="hexagon-left hexa-3-left"></div>
+                    <div class="hexagon-middle hexa-3-mid"></div>
+                    <div class="hexagon-right hexa-3-right"></div>
+                </div>
+                <div class="legend-item-info">
+                    <p>≤ 4</p>
+                </div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-item-pic">
+                    <div class="hexagon-left hexa-4-left"></div>
+                    <div class="hexagon-middle hexa-4-mid"></div>
+                    <div class="hexagon-right hexa-4-right"></div>
+                </div>
+                <div class="legend-item-info">
+                    <p>≤ 6</p>
+                </div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-item-pic">
+                    <div class="hexagon-left hexa-5-left"></div>
+                    <div class="hexagon-middle hexa-5-mid"></div>
+                    <div class="hexagon-right hexa-5-right"></div>
+                </div>
+                <div class="legend-item-info">
+                    <p>≤ 8</p>
+                </div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-item-pic">
+                    <div class="hexagon-left hexa-6-left"></div>
+                    <div class="hexagon-middle hexa-6-mid"></div>
+                    <div class="hexagon-right hexa-6-right"></div>
+                </div>
+                <div class="legend-item-info">
+                    <p>≤ 10</p>
+                </div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-item-pic">
+                    <div class="hexagon-left hexa-7-left"></div>
+                    <div class="hexagon-middle hexa-7-mid"></div>
+                    <div class="hexagon-right hexa-7-right"></div>
+                </div>
+                <div class="legend-item-info">
+                    <p>≤ 12</p>
+                </div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-item-pic">
+                    <div class="hexagon-left hexa-8-left"></div>
+                    <div class="hexagon-middle hexa-8-mid"></div>
+                    <div class="hexagon-right hexa-8-right"></div>
+                </div>
+                <div class="legend-item-info">
+                    <p>≤ 16</p>
+                </div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-item-pic">
+                    <div class="hexagon-left hexa-9-left"></div>
+                    <div class="hexagon-middle hexa-9-mid"></div>
+                    <div class="hexagon-right hexa-9-right"></div>
+                </div>
+                <div class="legend-item-info">
+                    <p>≤ 20</p>
+                </div>
+            </div>
+            <div class="legend-item">
+                <div class="legend-item-pic">
+                    <div class="hexagon-left hexa-10-left"></div>
+                    <div class="hexagon-middle hexa-10-mid"></div>
+                    <div class="hexagon-right hexa-10-right"></div>
+                </div>
+                <div class="legend-item-info">
+                    <p>≤ 100</p>
+                </div>
+            </div>
+        </div>
+    </div>
     <div id='map' class='map'></div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="script.js"></script>
+    <script src="button.js"></script>
 
 </body>
 
